@@ -1,3 +1,2 @@
-# File: python-hello_world/0-print.py
-
+#!/usr/bin/python3
 print("Programming is like building a multilingual puzzle")
