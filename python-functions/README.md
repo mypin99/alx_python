@@ -1,0 +1,1 @@
+this introduces us to python functions coding and how to apply them
