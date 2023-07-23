@@ -10,9 +10,9 @@ if num_args == 0:
 elif num_args == 1:
     # One argument passed
     print("1 argument:")
-    print("1:", sys.argv[1])
+    print(f"1: {sys.argv[1]}")
 else:
     # More than one argument passed
     print(f"{num_args} arguments:")
-    for i, arg in enumerate(sys.argv[1:], 1):
-        print(f"{i}: {arg}")
+    for i in range(1, num_args + 1):
+        print(f"{i}: {sys.argv[i]}")
