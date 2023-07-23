@@ -8,3 +8,4 @@ def print_matrix_integer(matrix=[[]]):
                 # Print a space after each element except the last one in the row
                 print(" ", end="")
         print()  # Move to the next line after printing each row
+        
