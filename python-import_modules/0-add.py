@@ -1,32 +1,8 @@
-4-raise_exception.py
-import add_0
-
+#!/usr/bin/env python3
+from add_0 import add
 a = 1
 b = 2
 
-result = add_0.add(a, b)
-print("{a} + {b} = {result}".format(a=a, b=b, result=result))
 
-a = 10
-b = 30
-
-result = add_0.add(a, b)
-print("{a} + {b} = {result}".format(a=a, b=b, result=result))
-
-a = -10
-b = 30
-
-result = add_0.add(a, b)
-print("{a} + {b} = {result}".format(a=a, b=b, result=result))
-
-a = -10
-b = -30
-
-result = add_0.add(a, b)
-print("{a} + {b} = {result}".format(a=a, b=b, result=result))
-
-a = 5
-b = "H"
-
-result = add_0.add(a, b)
-print("{a} + {b} = {result}".format(a=a, b=b, result=result))
+result = add(a, b)
+print(f"{a} + {b} = {result}")
