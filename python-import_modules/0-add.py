@@ -1,20 +1,32 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
+import add_0
+
 a = 1
 b = 2
 
+result = add_0.add(a, b)
+print("{a} + {b} = {result}".format(a=a, b=b, result=result))
 
-def add(a, b):
-    """My addition function
+a = 10
+b = 30
 
-    Args:
-        a: first integer
-        b: second integer
+result = add_0.add(a, b)
+print("{a} + {b} = {result}".format(a=a, b=b, result=result))
 
-    Returns:
-        The return value. a + b
-    """
-    return (a + b)
+a = -10
+b = 30
 
+result = add_0.add(a, b)
+print("{a} + {b} = {result}".format(a=a, b=b, result=result))
 
-result = add(a, b)
-print(f"{a} + {b} = {result}")
+a = -10
+b = -30
+
+result = add_0.add(a, b)
+print("{a} + {b} = {result}".format(a=a, b=b, result=result))
+
+a = 5
+b = "H"
+
+result = add_0.add(a, b)
+print("{a} + {b} = {result}".format(a=a, b=b, result=result))
