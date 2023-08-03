@@ -1,15 +1,25 @@
 #!/usr/bin/python3
 
-class Square:
-    """
+"""
     This class represents a square with a given size.
+
     Attributes:
         __size (int): The size of the square (private attribute).
     """
 
-    def __init__(self, size):
+
+class Square:
+    """
+    This class represents a square with a given size.
+
+    Attributes:
+        __size (int): The size of the square (private attribute).
+    """
+
+    def __init__(self, size=0):
         """
         Initializes a Square object with the given size.
+
         Args:
             size (int): The size of the square.
         """
@@ -18,6 +28,7 @@ class Square:
     def area(self):
         """
         Calculates the area of the square.
+
         Returns:
             int: The area of the square.
         """
@@ -26,6 +37,7 @@ class Square:
     def perimeter(self):
         """
         Calculates the perimeter of the square.
+
         Returns:
             int: The perimeter of the square.
         """
@@ -34,6 +46,7 @@ class Square:
     def get_size(self):
         """
         Gets the size of the square.
+
         Returns:
             int: The size of the square.
         """
@@ -42,8 +55,10 @@ class Square:
     def set_size(self, new_size):
         """
         Sets the size of the square to a new value.
+
         Args:
             new_size (int): The new size to set.
+
         Raises:
             ValueError: If the new size is negative.
         """
