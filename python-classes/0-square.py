@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 class Square:
     """
     This class represents a square.
@@ -17,4 +18,3 @@ class Square:
             None
         """
         self.__size = size
-        
