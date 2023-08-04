@@ -1,24 +1,33 @@
 #!/usr/bin/python3
-a = 1
-print(is_same_class(a, int))      # Output: True
+"""
+    Check if the given object is exactly an instance of the specified class.
 
-a = True
-print(is_same_class(a, int))      # Output: False
+    Parameters:
+        obj: Any Python object.
+        a_class: A Python class or class name to compare the type of the object against.
 
-a = 3.14
-print(is_same_class(a, int))      # Output: False
+    Returns:
+        bool: True if the object is an instance of the specified class; otherwise, False.
 
-a = True
-print(is_same_class(a, object))   # Output: True
+    Example:
+        >>> class MyClass:
+        ...     pass
+        ...
+        >>> obj1 = MyClass()
+        >>> obj2 = "Hello"
+        >>> obj3 = 42
+        >>>
+        >>> is_same_class(obj1, MyClass)
+        True
+        >>> is_same_class(obj2, str)
+        True
+        >>> is_same_class(obj3, list)
+        False
+    """""
 
-a = None
-print(is_same_class(a, object))   # Output: True
 
-a = None
-print(is_same_class(a, list))     # Output: False
-
-a = [1, 2, 3]
-print(is_same_class(a, list))     # Output: True
-
-a = [1, 2, 3]
-print(is_same_class(a, object))   # Output: False
+def is_same_class(obj, a_class):
+    """
+    Check if the given object is exactly an instance of the specified class.
+    """
+    return type(obj) is a_class
