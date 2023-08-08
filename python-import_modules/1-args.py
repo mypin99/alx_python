@@ -1,18 +1,15 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
+
 import sys
 
-# Get the total number of arguments
-num_args = len(sys.argv) - 1
 
-if num_args == 0:
-    # No arguments passed
-    print("0 arguments.")
-elif num_args == 1:
-    # One argument passed
-    print("1 argument:")
-    print(f"1: {sys.argv[1]}")
-else:
-    # More than one argument passed
-    print(f"{num_args} arguments:")
-    for i in range(1, num_args + 1):
-        print(f"{i}: {sys.argv[i]}")
+if __name__ == "__main__":
+    args = sys.argv[1:]
+    num_args = len(args)
+
+    if num_args == 0:
+        print("0 arguments.")
+    else:
+        print(f"{num_args} argument{'s' if num_args > 1 else ''}:")
+        for i, arg in enumerate(args, 1):
+            print(f"{i}: {arg}")
