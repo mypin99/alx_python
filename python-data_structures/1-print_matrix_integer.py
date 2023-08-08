@@ -1,11 +1,10 @@
-#!/usr/bin/python3
+#!/usr/bin/pyton3
+
 def print_matrix_integer(matrix=[[]]):
     for row in matrix:
-        for i in range(len(row)):
-            # Use str.format() to print the integer without casting it to a string explicitly
-            print("{:d}".format(row[i]), end="")
-            if i != len(row) - 1:
-                # Print a space after each element except the last one in the row
-                print(" ", end="")
-        print()  # Move to the next line after printing each row
-        
+        for i, num in enumerate(row):
+            if i == len(row) - 1:
+                print("{:d}".format(num), end="")
+            else:
+                print("{:d}".format(num), end=" ")
+        print()
