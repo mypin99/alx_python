@@ -1,8 +1,4 @@
 #!/usr/bin/python3
-"""
-Importing BaseGeometry
-"""
-BaseGeometry = __import__('5-base_geometry').BaseGeometry
 
 """
     A base class representing geometry.
@@ -25,18 +21,12 @@ BaseGeometry = __import__('5-base_geometry').BaseGeometry
     """
 
 
-class BaseGeometry:
-    """
-    A base class representing geometry.
-
-    This class is intended to be used as a base for other geometry-related classes.
-    It currently does not have any attributes or methods defined.
-    """
-
-
 class BaseGeometryMetaClass(type):
     def __dir__(cls):
         return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
+
+
+BaseGeometry = __import__("5-base_geometry").BaseGeometry
 
 
 class BaseGeometry(metaclass=BaseGeometryMetaClass):
