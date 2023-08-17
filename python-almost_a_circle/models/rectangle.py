@@ -8,7 +8,6 @@ from models.base import Base
 
 class Rectangle(Base):
     """Rectangle class which inherits from Base class"""
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialize a rectangle.
 
@@ -34,7 +33,7 @@ class Rectangle(Base):
     def width(self):
         """Getting the Rectangle width"""
         return self.__width
-
+        
     @width.setter
     def width(self, value):
         """Setting the Rectangle width"""
@@ -83,9 +82,9 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
-            raise ValueError("y must be >= 0")
+            raise ValueError("y must be >= 0") 
         self.__y = value
-
+    
     def _validate_width(self):
         """Validating the width attribute"""
         if not isinstance(self.__width, int):
@@ -142,7 +141,7 @@ class Rectangle(Base):
         Returns:
             formatted string of Rectange attributes.
         """
-        return ("[Rectangle] ({}) {}/{} - {}/{}").format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return("[Rectangle] ({}) {}/{} - {}/{}").format(self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
         """
@@ -163,3 +162,4 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+                
